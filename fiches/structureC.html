@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/apprendre.css">
+    <link rel="stylesheet" href="../styles/prism.css">
+    <link rel="icon" href="../img/icon.ico">
+    
+    <title>4. Les structures conditionnelles</title>
+
+</head>
+
+<body>
+
+    <script src="../scripts/prism.js"></script>
+
+
+
+    <header>
+        <img width="30" height="30" alt="logo" src="../img/logosite.png" />
+        <a href="../index.html" class="logo">LearnPY</a>
+        <a href="../apprendre.html">APPRENDRE</a>
+        <a href="../exercices.html">EXERCICES</a>
+        <a href="../apropos.html">A PROPOS</a>
+    </header>
+
+    <main>
+        <div class="exos">
+            <h2>4. Les structures conditionnelles</h2>
+            <details open>
+                <summary>Sommaire</summary>
+                <div class="sommaire_square">
+                    <h3>Sommaire</h3>
+                    <HR>
+                    <a href="#41_bases">
+                        <h5 class="ns">4.1 - Bases et opérateurs de comparaisons </h5>
+                    </a>
+                    <a href="#42_conditions">
+                        <h5>4.2 - Conditions <code>if</code> et <code>else</code></h5>
+                    </a>
+                </div>
+            </details>
+
+            <h3 id="41_bases">4.1 - Bases et opérateurs de comparaisons</h3>
+            <hr>
+            <p>Très souvent, vous allez être amené à devoir comparer des élements entre eux afin d'éxecuter quelque
+                chose de bien précis dans le cas où la comparaison est vérifiée. Par exemple écrire un texte uniquement si une
+                valeur est égale à un nombre spécifique. </p>
+
+            <p>Il s'agit comme vous l'avez deviné de <strong>conditions</strong>
+            </p>
+
+            <p>Les conditions sont construites autour de variables (selon leur valeur) d'où la nécéssité d'avoir des
+                opérateurs afin de pouvoir les comparer.</p>
+            <p>En voici la liste : </p>
+            <ul>
+                <li><code>==</code> Tester une égalité entre deux élements</li>
+                <li><code>!=</code> Tester la différence entre deux éléments</li>
+                <li><code>></code> Tester si une valeur est strictement supérieure à une autre</li>
+                <li><code><</code> Tester si une valeur est strictement inférieure à une autre</li>
+                <li><code><=</code> Tester si une valeur est inférieure ou égale à une autre</li>
+                <li><code>>=</code> Tester si une valeur est supérieure ou égale à une autre</li>
+            </ul>
+            <h3 id="42_conditions">4.2 - Conditions <code>if</code> et <code>else</code></h3>
+            <hr>
+
+            <p>Python nous donne plusieurs structures conditionnelles :
+            </p>
+
+            <ul>
+                <li>La condition <code>if</code> (si)</li>
+                <li>La condition <code>if else</code> (si,sinon)</li>
+                <li>La condition <code>if elif else</code> (si, sinon si, sinon)</li>
+            </ul>
+
+            <p>Voici quelques exemples de structures avec les différentes conditions :</p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    valeur = 6
+    valeur2 = 12
+
+    #Condition si (if)
+
+    if(valeur == valeur2):
+        print("Valeur égales")
+
+    #Condition si sinon (if else)
+        
+    if(valeur != valeur2):
+        print("Valeur pas égales")
+    else:
+        print("Valeur égales")
+
+    #Condition si, sinon si, sinon
+
+    if(valeur > valeur2):
+        print("Valeur supérieur")
+    elif(valeur != valeur2):
+        print("Valeur pas égales")
+    else:
+        print("Valeur inférieur et égale")
+                    </code>
+                </pre>
+            </div>
+
+            <input onclick="window.location.href='entreesortie.html'" class="button_style" type="button"
+                value="<< 3. Les opérations d’entrée-sortie">
+            <input onclick="window.location.href='structureI.html'" class="button_style" type="button"
+                value="5. Les structures itératives >>">
+    </main>
+
+</body>
+
+</html>

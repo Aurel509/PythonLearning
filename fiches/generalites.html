@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/apprendre.css">
+    <link rel="stylesheet" href="../styles/prism.css">
+
+    <title>1. Généralités</title>
+
+</head>
+
+<body>
+
+    <script src="../scripts/prism.js"></script>
+
+
+
+    <header>
+        <img width="30" height="30" alt="logo" src="../img/logosite.png" />
+        <a href="../index.html" class="logo">LearnPY</a>
+        <a href="../apprendre.html">APPRENDRE</a>
+        <a href="../exercices.html">EXERCICES</a>
+        <a href="../apropos.html">A PROPOS</a>
+        <link rel="icon" href="../img/icon.ico">
+    </header>
+
+    <main>
+        <div class="exos">
+            <h2>1. Généralités sur le langage</h2>
+            <details open>
+                <summary>Sommaire</summary>
+                <div class="sommaire_square">
+                    <h3>Sommaire</h3>
+                    <HR>
+                    <a href="#11_ckoi">
+                        <h5 class="ns">1.1 - Quelques informations de bases</h5>
+                    </a>
+                    <a href="#12_types">
+                        <h5 class="ns">1.2 - Utilisation de l'interpréteur</h5>
+                    </a>
+                    <a href="#13_indentation">
+                        <h5>1.3 - Premiers scripts et indentation</h5>
+                    </a>
+                </div>
+            </details>
+
+            <h3 id="11_ckoi">1.1 Quelques informations de bases</h3>
+            <hr>
+            <p>Le langage de programmation Python a été créé en 1989 par Guido van Rossum, aux Pays-Bas.
+                La première version publique de ce langage a été publiée en 1991.</p>
+            <p>Python est multiplateforme. C'est-à-dire qu'il fonctionne sur de nombreux systèmes d'exploitation :
+                Windows, Mac OS X, Linux, Android, iOS...</p>
+            <p>C'est un langage de haut niveau. Il demande relativement peu de connaissance sur le fonctionnement d'un
+                ordinateur pour être utilisé.</p>
+            <p>Python est un langage interprété, il n'a pas besoin d'être compilé pour être exécuté (contrairement au
+                C/C++).</p>
+
+
+            <h3 id="12_types">1.2 L'interpréteur</h3>
+            <hr>
+            <p>Comme dit précémment Python est un langage qui n'a pas besoin d'être compilé pour être éxecuté, possédant
+                son propre <strong>interpréteur</strong></p>
+            <p>Ce dernier peut être lancé sur un <strong>shell</strong> (cmd) avec la commande <code>python</code></p>
+            <p>Le triple chevron <code>>>></code> est l'invite de commande lorsque Python attend une commande de votre
+                part. Testons cela avec une commande simple :</p>
+            <code>print("Salut !")</code>
+            <p>Voici le résultat que vous devez obtenir :</p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> print("Salut !")
+    Salut !
+                    </code>
+                </pre>
+            </div>
+            <p>Il également possible de s'en servir comme calculatrice, voici un exemple :</p>
+
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> 8+6
+    14
+    >>> 15*87
+    1305
+                    </code>
+                </pre>
+            </div>
+
+            <p>Vous pouvez quitter l'interpréteur avec la commande <code>exit()</code></p>
+            <h3 id="13_indentation">1.3 Premiers scripts et indentation</h3>
+            <hr>
+            <p>L'interpréteur peut s'avérer rapidement limité, d'où la possibilité de créer des scripts pouvant faire
+                des choses un peu plus complexes.</p>
+            <p>Nous allons donc écrire notre premier script Python, les scripts en python possèdent l'extension
+                <code>.py</code>.
+                Créez votre script (nommez-le comme vous le souhaitez) avec cette extension quelque part sur votre
+                machine. Vous pouvez utiliser un editeur de texte quelconque
+            </p>
+            <p>
+                Nous allons réutiliser la commande <code>print()</code> utilisée précédemment.
+            </p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    #Mon premier script :D
+    print("Je suis un message")
+                    </code>
+                </pre>
+            </div>
+            <p>
+                A noter, que vous pouvez ajouter des commentaires grâce au caractère <code>#</code>. Comme montré
+                ci-dessus
+            </p>
+            <p>Ensuite, enregistrez votre fichier, puis quittez l'éditeur de texte.</p>
+            <p>Pour exécuter votre script, ouvrez un shell et entrez la commande :</p>
+            <code>python monscript.py</code>
+
+            <p>Vous devrez donc retrouver ce résultat</p>
+
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    $ python monscript.py
+    Je suis un message
+                    </code>
+                </pre>
+            </div>
+
+            <p>Les scripts que vous aurez à concevoir à l'avenir seront très probablement bien plus gros que ça. C'est
+                pourquoi <strong>l'indentation</strong> est importante</p>
+
+            <p>En Python, l'espace blanc est utilisé pour <strong>indenter</strong>, le symbole deux points
+                <code>:</code> pour le <strong>début</strong>
+                d'un bloc, et
+                le <strong>retrait</strong> pour la fin d'un bloc</p>
+            <p>Voici un exemple de structure : </p>
+            <div class="code">
+                <pre>
+                    <code class="language-python">
+    #Un bloc
+    if truc == 52:
+        print("truc est égal à 52")
+    else:
+        print("truc n'est pas égal à 52")
+
+    #En dehors de tout les blocs. 
+    print("du blabla inutile") 
+
+    #Dans deuxième blc
+    if autre_truc == True:
+        if truc == 0:
+            print("autre truc == true ! et truc est = 0 !")
+        else:
+            print("truc pas égal à 0")
+            
+        #Exécuté seulement si autre_truc == True
+        valeur = truc
+    else:
+        print("autre truc pas égal a true")
+                    </code>
+                </pre>
+            </div>
+            <p><i>A noter que les commentaires ne sont pas pris en compte dans l'indentation car ignorés par Python</i>
+            </p>
+            <p>En cas de non respect de l'indentation, le script affichera une erreur. Voici un exemple simple de
+                mauvaise indentation</p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    print("Ceci")
+        print("N'est pas une bonne indentation")
+    print("En effet.")
+                    </code>
+                </pre>
+            </div>
+            <input onclick="window.location.href='../index.html'" class="button_style" type="button"
+                value="<< Retour à la page principale">
+            <input onclick="window.location.href='variables.html'" class="button_style" type="button"
+                value="2. Les variables en Python >>">
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/exercices.css">
+    <link rel="stylesheet" href="styles/prism.css">
+    <link rel="icon" href="img/icon.ico">
+
+    <title>Exercices</title>
+
+</head>
+
+<body>
+    
+    <script src="scripts/prism.js"></script>
+
+
+
+    <header>
+        <img width="30" height="30" alt="logo" src="img/logosite.png" />
+        <a href="index.html" class="logo">LearnPY</a>
+        <a href="apprendre.html">APPRENDRE</a>
+        <a href="exercices.html">EXERCICES</a>
+        <a href="apropos.html">A PROPOS</a>
+        
+    </header>
+
+    <main>
+        <div class="exos">
+            <h1>Exercice 1 - L'entier suivant</h1>
+            <p class="center">Enoncé de l'exercice</p>
+            <div class="enonce">
+                <p>Concevoir un programme qui demande à l’utilisateur la saisie d’un entier et qui affiche l’entier
+                    suivant.</p>
+                <p>Exemple, si l’utilisateur saisit 651, le programme affiche « 652 ».</p>
+            </div>
+
+            <details>
+                <summary>Afficher le code de solution</summary>
+                <div class="code">
+                    <pre>
+                        <code class="language-python"> 
+    #On récupère la valeur donnée par l'utilisateur
+    reponse = input('Donnez une valeur : ')
+                            
+    #On transforme la réponse en nombre
+    valeur = int(reponse)
+                            
+    #On incrémente la valeur de 1
+    valeur = valeur + 1
+                            
+    #On print la nouvelle valeur
+    print("Valeur finale : ", valeur)
+                        </code>
+                    </pre>
+                </div>
+            </details>
+
+            <hr>
+
+            <h1>Exercice 2 - Mineur ou Majeur ?</h1>
+            <p class="center">Enoncé de l'exercice</p>
+            <div class="enonce">
+                <p>Écrire un programme qui demande l’âge de l’utilisateur et qui, après avoir vérifié si cet âge est
+                    valide, indique si l’utilisateur est majeur ou mineur.</p>
+                <p class="ns">On considère :</p>
+                <p class="ns">— qu’un âge valide est compris entre 0 et 120</p>
+                <p>— la majorité légale en France : 18 ans</p>
+            </div>
+
+            <details>
+                <summary>Afficher le code de solution</summary>
+                <div class="code">
+                    <pre>
+                        <code class="language-python">
+    #On récupère la valeur donnée par l'utilisateur
+    reponse = input('Donnez votre âge : ')
+
+    #On transforme la valeur récupérée en nombre
+    age = int(reponse)
+
+    #On vérifie si l'âge donné est valide.
+    if(age > 0 and age < 120):
+
+    #Vérification de l'âge (APRES que l'âge soit vérifié)
+        if(age < 18):
+            print("Vous êtes mineur")
+        else:
+            print("Vous êtes majeur")
+
+    #Dans le cas où l'age n'est pas valide, on renvoi un message d'erreur
+    else:
+        print("L'âge donné n'est pas valide.")
+                        </code>
+                    </pre>
+                </div>
+            </details>
+
+            <hr>
+            <h1>Exercice 3 - Tables de multiplications</h1>
+            <p class="center">Enoncé de l'exercice</p>
+            <div class="enonce">
+                <p>Concevoir une programme qui demande un entier à l’utilisateur et qui affiche à l’aide d’une boucle
+                    <code>for</code> la table de multiplication de cet entier.</p>
+                <p>Par exemple, si l’utilisateur saisit 7, le programme affiche</p>
+
+                <p class="ns">Table des 7</p>
+                <p class="ns">7 * 1 = 7</p>
+                <p class="ns">7 * 2 = 14</p>
+                <p class="ns"> ...</p>
+                <p>7 * 10 = 70</p>
+            </div>
+
+            <details>
+                <summary>Afficher le code de solution</summary>
+                <div class="code">
+                    <pre>
+                        <code class="language-python">
+    #On récupère la valeur donnée par l'utilisateur
+    reponse = input('Donnez un nombre : ')
+
+    #On transforme la valeur récupérée en nombre
+    valeur = int(reponse)
+
+
+    print("Table des ",valeur)
+    #On effectue boucle for qui sera répété 10 fois (de 1 à 10.)
+    for facteur in range(1,11):
+
+    #On calcul la multiplication, et on affiche le résultat à chaque intération
+        resultat = valeur * facteur
+        print(valeur," * ",facteur," = ",resultat)
+                        </code>
+                    </pre>
+                </div>
+            </details>
+
+            <hr>
+            <h1>Exercice 4 - Acroissement annuel de Poitiers</h1>
+            <p class="center">Enoncé de l'exercice</p>
+            <div class="enonce">
+                <p>Le taux d’accroissement annuel de la ville de Poitiers (Vienne) est de 0.89%.</p>
+                <p>Écrire un programme qui indique le nombre d’années à partir de l’an 2021 pour atteindre 100 000
+                    habitants, sachant la ville compte actuellement 87 646 habitants. Utiliser une boucle <code>while</code>.
+                    </p>
+
+                <p class="ns">Les calculs à opérer sont les suivants :</p>
+                <p class="ns">— Année 2022. Population prévue : 87646 + (87646 × 0.89/100) = 88426</p>
+                <p class="ns">— Année 2023. Population prévue : 88426 + (88426 × 0.89/100) = 89212</p>
+                <p>Etc...</p>
+            </div>
+
+            <details>
+                <summary>Afficher le code de solution</summary>
+                <div class="code">
+                    <pre>
+                        <code class="language-python">
+    #Déclaration des variables pour la population et l'année
+    pop = 87646
+    annee = 2021
+
+    #Tant que la population n'a pas atteint 100 000 habitants...
+    while(pop < 100000):
+        
+        #Calcul du nombre d'habitants arrondi
+        resultat = round(pop + (pop * 0.89/100))
+
+        #Incrémentation de l'année
+        annee += 1
+        
+        #Affichage de l'année en cours et du nombre d'habitants
+        print("Année",annee,
+            "| Population prévue :",pop,
+            " + (",pop,"* 0.89/100) =", resultat)
+
+        #Mise à jour de la population pour l'année suivante
+        pop = resultat
+
+                        </code>
+                    </pre>
+                </div>
+            </details>
+
+            <hr>
+            <h1>Exercice 5 - Le tableau</h1>
+            <p class="center">Enoncé de l'exercice</p>
+            <div class="enonce">
+                <p>Écrire un programme</p>
+                <p class="leftNS">— qui demande à l’utilisateur de remplir un tableau de réels comportant dix cases</p>
+                <p class="leftNS">— qui calcule la somme des éléments de ce tableau</p>
+                <p class="left">— qui affiche ce résultat</p>
+            </div>
+
+            <details>
+                <summary>Afficher le code de solution</summary>
+                <div class="code">
+                    <pre>
+                        <code class="language-python">
+    #Initialisation du tableau
+    tableau = []
+
+    print("Donnez 10 nombres")
+
+    #Boucle for, on répète 10 fois 
+    for i in range(10):
+
+        #Stockage de la réponse donnée
+        reponse = input()
+
+        #On change la réponse en nombre décimal
+        valeur = float(reponse)
+
+        #Ajout de la valeur donnée dans le tableau à l'indice i
+        tableau.append(valeur)
+
+    #Calcul et affichage de la somme du tableau
+    print("Somme du tableau donné :", sum(tableau))
+
+
+                        </code>
+                    </pre>
+                </div>
+            </details>
+
+            <hr>
+            <h1>Exercice 6 - Prix Baguette</h1>
+            <p class="center">Enoncé de l'exercice</p>
+            <div class="enonce">
+                <p>Écrire un sous programme qui prend en paramètre le prix d’une baguette de pain et un nombre
+                    de baguettes, et qui retourne le prix total des baguettes.</p>
+                <p>Par exemple, si le sous-programme reçoit en entrée 0,8 et 2, il retourne 1,6 (les deux baguettes coûtent 1,60 euros).</p>
+                <p>Tester ce sous programme : demander un nombre de baguettes à l’utilisateur et afficher le prix
+                    total en supposant qu’une baguette coûte 0,90 euro.</p>
+            </div>
+
+            <details>
+                <summary>Afficher le code de solution</summary>
+                <div class="code">
+                    <pre>
+                        <code class="language-python">
+    #Fonction pour calculer le prix total des baguettes
+    def prixBaguette(prix,nombre):
+
+        #Calcul du prix total
+        total = prix * nombre
+
+        #On renvoi le résultat
+        return total
+
+
+    reponse = input("Nombre de baguettes :")
+    nombre = int(reponse)
+
+    #Execution de la fonction avec le nombre de baguettes donné
+    prixTotal = prixBaguette(0.90, nombre)
+
+    print("Prix total :",prixTotal,"€")
+
+                        </code>
+                    </pre>
+                </div>
+            </details>
+
+            <hr>
+            <h1>Exercice 7 - Somme et Produit</h1>
+            <p class="center">Enoncé de l'exercice</p>
+            <div class="enonce">
+                <p>Écrire un sous programme qui prend en entrée deux entiers et qui retourne la somme et le produit
+                    de ces deux entiers.</p>
+                <p class="ns">Par exemple, si le programme reçoit en entrée 3 et 5</p>
+                <p class="ns">il fournit en sortie la somme 3 + 5 = 8 et le produit 3 × 5 = 15</p>
+                <p>Tester ce sous programme : demander à l’utilisateur deux entiers et afficher leur somme et leur
+                    produit.</p>
+            </div>
+
+            <details>
+                <summary>Afficher le code de solution</summary>
+                <div class="code">
+                    <pre>
+                        <code class="language-python">
+    #Fonction qui calcul le produit et la somme de deux entiers et les retourne
+    def SommeProduit(entier1,entier2):
+        somme = entier1 + entier2
+        produit = entier1 * entier2
+        return somme,produit
+
+
+    #Prise des valeurs que l'on converti en entier
+    reponse = input("Entrez un nombre : ")
+    entier1 = int(reponse)
+    reponse = input("Entrez un deuxième nombre: ")
+    entier2 = int(reponse)
+
+
+    #Appel de la fonction
+    resultat = SommeProduit(entier1, entier2)
+
+    #Affichage
+    print("Somme:",resultat[0],"| Produit:",resultat[1])
+                        </code>
+                    </pre>
+                </div>
+            </details>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

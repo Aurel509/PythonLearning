@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/apprendre.css">
+    <link rel="stylesheet" href="../styles/prism.css">
+    <link rel="icon" href="../img/icon.ico">
+    <title>5. Les structures itératives</title>
+
+</head>
+
+<body>
+
+    <script src="../scripts/prism.js"></script>
+
+
+
+    <header>
+        <img width="30" height="30" alt="logo" src="../img/logosite.png" />
+        <a href="../index.html" class="logo">LearnPY</a>
+        <a href="../apprendre.html">APPRENDRE</a>
+        <a href="../exercices.html">EXERCICES</a>
+        <a href="../apropos.html">A PROPOS</a>
+    </header>
+
+    <main>
+        <div class="exos">
+            <h2>5. Les structures itératives</h2>
+            <details open>
+                <summary>Sommaire</summary>
+                <div class="sommaire_square">
+                    <h3>Sommaire</h3>
+                    <HR>
+                    <a href="#51_def">
+                        <h5 class="ns">5.1 - Définition </h5>
+                    </a>
+                    <a href="#52_boucles">
+                        <h5>5.2 - Boucles <code>for</code> et <code>while</code></h5>
+                    </a>
+                </div>
+            </details>
+
+            <h3 id="51_def">5.1 - Définition</h3>
+            <hr>
+            <p>Dans d'autres cas, vous allez être amené à devoir répeter des actions. C'est là que l'on retrouve les
+                <strong>structures itératives</strong> aussi dites répétitives</p>
+
+            <p>Il existe deux cas essentiels de boucle :
+            </p>
+            <ul>
+                <li>La boucle <code>for</code> éxecute un code <strong>pour</strong> chaque élément d'un ensemble donné.</li>
+                <li>La boucle <code>while</code> éxécuter un code <strong>tant qu'une</strong> condition est vraie.</li>
+            </ul>
+            <h3 id="42_conditions">5.2 - Boucles <code>for</code> et <code>while</code></h3>
+            <hr>
+
+            <p>Voici quelques exemples des structures itératives :
+            </p>
+
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    valeur = 2
+
+    #Tant que valeur pas égal à 15. On incrémente et affiche valeur 
+    while(valeur != 15):
+        valeur += 1
+        print(valeur)
+    
+    valeur = 5
+
+    #Pour i allant de 0 à valeur. On incrémente valeur de 5 et on l'affiche
+    for i in range(valeur):
+        valeur += 5
+        print(valeur)
+
+                    </code>
+                </pre>
+            </div>
+
+            <input onclick="window.location.href='structureC.html'" class="button_style" type="button"
+                value="<< 4. Les structures conditionnelles">
+            <input onclick="window.location.href='tableaux.html'" class="button_style" type="button"
+                value="6. Les tableaux >>">
+    </main>
+
+</body>
+
+</html>

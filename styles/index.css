@@ -1,0 +1,36 @@
+body {
+    background-image: linear-gradient(rgba(102, 191, 202, 0.5), rgba(170, 185, 27, 0.3)),
+                  url("../img/background.jpeg");
+}
+
+main {
+    color:#eeeeee;
+    opacity: 1;
+}
+
+a {
+    color: #eeeeee;
+    
+}
+
+h2 {
+    font-size: 70px;
+    text-align: center;
+    margin: 100px auto 10px auto;
+    width: 1000px;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,164,255,0.8547794117647058) 100%, rgba(0,212,255,1) 100%);
+    opacity: 0.75;
+}
+
+div {
+    font-size: 20px;
+    text-align: center;
+    margin: 100px auto 10px auto;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 1em;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,164,255,0.8547794117647058) 100%, rgba(0,212,255,1) 100%);
+    opacity: 0.9;
+}

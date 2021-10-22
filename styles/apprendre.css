@@ -1,0 +1,100 @@
+body {
+    background-image: linear-gradient(rgba(102, 191, 202, 0.5), rgba(170, 185, 27, 0.3)),
+                  url("../img/background.jpeg");
+    background-attachment: fixed;
+}
+
+main {
+    color:#eeeeee;
+    opacity: 1;
+}
+
+a {
+    color: #eeeeee;
+}
+
+hr {
+    margin: -1em auto 1em;
+}
+
+
+/* Affichage spécial pour des fonctions ou des bouts de code */
+code {
+    background-color: #2F2F2F;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
+
+/* Style pour le "bouton" d'affichage du code */
+details {
+    margin: 10px 10px 10px 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+
+/* Cadre général */
+.exos {
+    font-size: 20px;
+    margin: 100px auto 0 auto;
+    padding: 10px 20px 20px;
+    width: 800px;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,164,255,0.8547794117647058) 100%, rgba(0,212,255,1) 100%);
+    opacity: 0.9;
+}
+
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.leftNS {
+    text-align: left;
+    margin-bottom: -1em;
+}
+
+/* NS ou No Space, réduit l'écart entre deux paragraphes pour une meilleure fluidité */
+.ns {
+    margin-bottom: -1em; 
+}
+
+.sommaire_square {
+    background: black;
+    font-family: 'Quicksand', sans-serif;
+    border: 5px double gray;
+    text-align: left;
+}
+/* Cadre noir */
+.black_square {
+    font-size: 20px;
+    text-align: center;
+    margin-top: -20px;
+    border: 5px double gray;
+    background: black;
+    font-family: 'Quicksand', sans-serif;
+}
+
+

@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/apprendre.css">
+    <link rel="stylesheet" href="../styles/prism.css">
+    <link rel="icon" href="../img/icon.ico">
+
+    <title>2. Variables</title>
+
+</head>
+
+<body>
+    
+    <script src="../scripts/prism.js"></script>
+
+
+
+    <header>
+        <img width="30" height="30" alt="logo" src="../img/logosite.png" />
+        <a href="../index.html" class="logo">LearnPY</a>
+        <a href="../apprendre.html">APPRENDRE</a>
+        <a href="../exercices.html">EXERCICES</a>
+        <a href="../apropos.html">A PROPOS</a>
+    </header>
+
+    <main>
+        <div class="exos">
+            <h2>2. Variables en python</h2>
+            <details open>
+                <summary>Sommaire</summary>
+                <div class="sommaire_square">
+                    <h3>Sommaire</h3>
+                    <HR>
+                    <a href="#21_bases"><h5 class="ns">2.1 - Les bases</h5></a>
+                    <a href="#22_types"><h5 class="ns">2.2 - Différents types</h5></a>
+                    <a href="#23_nommage"><h5 class="ns">2.3 - Nommage de variables</h5></a>
+                    <a href="#24_operation"><h5 class="ns">2.4 - Opérations</h5></a>
+                    <a href="#25_conversion"><h5>2.5 - Conversions</h5></a>    
+                </div>
+            </details>
+
+            <h3 id="21_bases">2.1 Les bases</h2>
+            <hr>
+            <p>Python se démarque des autres langages quant à sa manière de gérer les variables, leur déclaration 
+                et initialisation se font en même temps. </p>
+            <p>On appelle ceci un <strong>typage dynamique</strong>, voici un exemple réalisé dans l'interpréteur :</p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> test = 10
+    >>> test
+    10
+                    </code>
+                </pre>
+            </div>
+
+            <p>Dans cet exemple, nous déclarons une variable <code class="language-python">test</code>, 
+                puis nous l'initialisation à <strong>10</strong></p>
+            <p>Mais en réalité, la ligne 1 permet ici de faire 3 choses à la fois</p>
+            <ul>
+                <li>Premièrement, Python ici "devine" que notre variable est un <strong>entier</strong> </li>
+                <li>Deuxièment, Python alloue la mémoire nécéssaire pour stocker la variable et la retourner avec le nom 
+                    <code class="language-python">test</code> </li>
+                <li>Pour finir, Python assigne la valeur <strong>10</strong> à notre variable</li>
+            </ul>
+
+            <h3 id="22_types">2.2 Différents types</h3>
+            <hr>
+            <p>Comme vous le savez probablement, il existe plusieurs types de variables</p>
+            <ul>
+                <li>Les entiers (integer) notés : <code>int</code></li>
+                <li>Les nombres décimaux (ou réels) notés : <code>float</code></li>
+                <li>Les chaînes de caractères notées : <code>string</code></li>
+                <li>Les booléens (boolean) notés : <code>bool</code></li>
+                <li>Et d'autres...</li>
+            </ul>
+            <p>Voici d'autres exemples d'utilisation avec l'interpréteur : </p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> a = 2.6
+    >>> a
+    2.6
+    >>> b = "test"
+    >>> b
+    'test'
+    >>> c = "Je suis une chaîne de caractères"
+    >>> c
+    'Je suis une chaîne de caractères'
+    >>> 
+
+                    </code>
+                </pre>
+            </div>
+            <p>Dans cet exemple, on retrouve 3 variables, un float et 2 chaînes de caractères, 
+                les chaînes de caractères sont embriquées avec des guillemets et les floats utilisent un point en tant que 
+                séparateur décimal et non une virgule.</p>
+                
+            <p>Ce qui veut dire que Python reconnait en tant que float <code class="language-python"> 2.6</code> 
+                mais pas <code class="language-python">2,6</code></p>
+
+            <p>Par ailleurs, vous pouvez consulter le type d'une variable avec la fonction <code>type()</code></p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> e = 8
+    >>> type(e)
+    &lt;class 'int'&gt;
+                    </code>
+                </pre>
+            </div>
+            <h3 id="23_nommage">2.3 Nommage de variables</h3>
+            <hr>
+            <p>
+                Le nom des variables en Python peut être constitué de lettres minuscules et majuscules, 
+                de nombres <code>(0 à 9)</code> ou d'un underscore <code>_</code>. 
+                Vous ne pouvez pas utiliser d'espace dans un nom de variable.
+            </p>
+            <p>
+                Python est sensible à la casse, les variables 
+                <code class="language-python">TesT, test</code> ou <code class="language-python">TEsT</code> sont donc différentes.
+            </p>
+
+            <p class="ns">
+                Certains noms de variables sont à éviter, notamment ceux "réservés" par Python.
+            </p> 
+            <p>Quelques exemples:
+                <code class="language-python">if, print, from, range</code> etc...
+            </p>
+            <h3 id="#24_operation">2.4 Opérations</h2>
+            <hr>
+            <p>On retrouve les quatre opérations de base sur les types numériques (entiers et floats) :</p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> valeur = 31
+    >>> valeur + 9
+    40
+    >>> valeur - 3
+    28
+    >>> x = 1.85
+    >>> x * 4
+    7.4
+    >>> y = 6
+    >>> y / 2
+    3.0
+                    </code>
+                </pre>
+            </div>
+            <p>En fonction du calcul, la variable peut se transformer en <code>float</code>. 
+                Avec une division la transformation en <code>float</code> est systématique comme sur le dernier exemple.</p>
+            <p>Il existe également d'autres opérateurs.</p>
+            <ul>
+                <li><code>%</code> pour modulo</li>
+                <li><code>//</code> pour le quotient</li>
+                <li><code>**</code> pour la puissance</li>
+            </ul>
+
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> a = 6
+    >>> 6 % 2
+    0
+    >>> a // 2
+    3
+    >>> a ** 2
+    36
+                    </code>
+                </pre>
+            </div>
+
+
+            <h3 id="25_conversion">2.5 Conversions</h2>
+            <hr>
+
+            <p>A l'avenir il est possible que vous soyez amené à convertir des types. 
+                C'est-à-dire passer d'un type numérique à une chaîne de caractères ou vice-versa.</p>
+            <p>Heureusement, des fonctions ont été crées dans Python pour nous simplifier le travail.</p>
+            <p class="ns">A savoir:</p>
+            <p><code>int() float()</code> et <code>str()</code></p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> b = 12
+    >>> str(b)
+    '12'
+    >>> c = 3.6
+    >>> int(c)
+    3
+    >>> d = '42.1'
+    >>> float(d)
+    42.1
+                    </code>
+                </pre>
+            </div>
+            <input onclick="window.location.href='generalites.html'" class="button_style" type="button" value="<< 1. Généralités sur le langage">
+            <input onclick="window.location.href='entreesortie.html'" class="button_style" type="button" value="3. Les opérations d’entrée-sortie >>">
+    </main>
+
+</body>
+
+</html>

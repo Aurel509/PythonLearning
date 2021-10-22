@@ -1,0 +1,73 @@
+html {
+    height: 100%;
+  }
+
+body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: #1f1e1e;
+    font-family: 'Roboto', sans-serif;
+    color: #eeeeee;
+}
+
+
+/* HEADER */
+header {
+    background: linear-gradient(to bottom, #356aa0 53%,#102438 100%);
+    padding: 5px;
+}
+
+.logo {
+    display: inline;
+    font-family: 'Righteous', cursive;
+    color: #eeeeee;
+    padding: 10px 15px;
+    font-size: 30px;
+}
+header a {
+    display: inline;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    color: #eeeeee;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #eeeeee;    
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    color: #eeeeee;
+}
+
+/* Buttons */
+
+.button_style {
+    margin: 15px auto;
+    width: 395px;
+    padding: 0 15px;
+    border: 0;
+    line-height: 2.5;
+    text-align: center;
+    border-radius: 10px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
+    background-color: rgb(73, 66, 179);
+    background-image: linear-gradient(to top left,rgba(0, 0, 0, .2),rgba(0, 0, 0, .2) 30%,rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6), inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.button_style:hover {
+    background-color: rgb(118, 110, 161);
+}
+
+.button_style:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+}

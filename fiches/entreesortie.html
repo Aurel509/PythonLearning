@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/apprendre.css">
+    <link rel="stylesheet" href="../styles/prism.css">
+    <link rel="icon" href="../img/icon.ico">
+    
+    <title>3. Les opérations d’entrée-sortie</title>
+
+</head>
+
+<body>
+
+    <script src="../scripts/prism.js"></script>
+
+
+
+    <header>
+        <img width="30" height="30" alt="logo" src="../img/logosite.png" />
+        <a href="../index.html" class="logo">LearnPY</a>
+        <a href="../apprendre.html">APPRENDRE</a>
+        <a href="../exercices.html">EXERCICES</a>
+        <a href="../apropos.html">A PROPOS</a>
+    </header>
+
+    <main>
+        <div class="exos">
+            <h2>3. Les opérations d’entrée-sortie</h2>
+            <details open>
+                <summary>Sommaire</summary>
+                <div class="sommaire_square">
+                    <h3>Sommaire</h3>
+                    <HR>
+                    <a href="#31_print">
+                        <h5 class="ns">3.1 - Affichage</h5>
+                    </a>
+                    <a href="#32_demande">
+                        <h5>3.2 - Saisie au clavier</h5>
+                    </a>
+                </div>
+            </details>
+
+            <h3 id="31_print">3.1 Affichage</h3>
+            <hr>
+            <p>Afin d'afficher du texte à l'écran, comme vu précédemment il existe la fonction <code>print()</code>.
+                Relativement simpliste elle permet d'afficher ce qu'on lui demande en <strong>argument</strong> et
+                fait un retour à la ligne.</p>
+
+            <p>Il est également possible de faire afficher des variables avec cette fonction. Voici quelques exemples :
+            </p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> a = 6
+    >>> b = 8
+    >>> c = 1
+    >>> print("a est égal à", a, "\nb est égal à",b,"\nc est égal à",c)
+    a est égal à 6 
+    b est égal à 8 
+    c est égal à 1
+                    </code>
+                </pre>
+            </div>
+            <p>Vous remarquez qu'en plus de faire afficher les variables, nous avons fait en sorte qu'une fois la valeur
+                affichée on passe une ligne. Ceci est grâce au <code>\n</code>. Il en existe d'ailleurs plusieurs:</p>
+
+            <ul>
+                <li><code>\n</code> pour passer une ligne (celui utilisé ci-dessus)</li>
+                <li><code>\t</code> pour une tabulation</li>
+                <li><code>\r</code> pour un retour chariot</li>
+            </ul>
+
+            <h3 id="32_demande">3.2 Saisie au clavier</h3>
+            <hr>
+            <p>Lorsque l'on veut demander à un utilisateur de saisir quelque chose, il existe la fonction <code>input()</code></p>
+            <p>En voici un exemple relativement simple : </p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    reponse = input("Ecrit un truc :")
+    print("Tu as écrit :", reponse)
+                    </code>
+                </pre>
+            </div>
+            <p>Ici, on demande à l'utilisateur d'écrire quelque chose, que l'on stocke dans la variable
+                <code>reponse</code>. Puis on fait afficher ce que l'utilisateur a écrit avec la fonction
+                <code>print()</code> utilisée précédemment
+            </p>
+
+
+            <p>Par défaut, Python considère directement le contenu donné par l'utilisateur comme un <code>string</code>.
+                Dans le cas où l'on souhaite récupérer autre chose cela pose problème. Il faut donc convertir ! Voici
+                un exemple pour récupérer un entier : </p>
+
+
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    reponse = input("Ecrit un truc :")
+    valeur = int(reponse)
+    print("Tu as écrit :", valeur)
+                    </code>
+                </pre>
+            </div>
+
+            <p>A noter qu'il est également possible de simplifier cela en une seule ligne. Comme-ceci</p>
+
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    reponse = int(input("Ecrit un truc :"))
+    print("Tu as écrit :", reponse)
+                    </code>
+                </pre>
+            </div>
+            <p>Afin de recupérer autre chose il suffit remplacer la fonction <code>int()</code> par une des autres fonctions de conversion montrées précédemment.</p>
+            <input onclick="window.location.href='variables.html'" class="button_style" type="button"
+                value="<< 2. Les variables en Python">
+            <input onclick="window.location.href='structureC.html'" class="button_style" type="button"
+                value="4. Les structures conditionnelles >>">
+    </main>
+
+</body>
+
+</html>

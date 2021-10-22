@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/apprendre.css">
+    <link rel="stylesheet" href="../styles/prism.css">
+    <link rel="icon" href="../img/icon.ico">
+
+    <title>7. Les sous programmes</title>
+
+</head>
+
+<body>
+
+    <script src="../scripts/prism.js"></script>
+
+
+
+    <header>
+        <img width="30" height="30" alt="logo" src="../img/logosite.png" />
+        <a href="../index.html" class="logo">LearnPY</a>
+        <a href="../apprendre.html">APPRENDRE</a>
+        <a href="../exercices.html">EXERCICES</a>
+        <a href="../apropos.html">A PROPOS</a>
+    </header>
+
+    <main>
+        <div class="exos">
+            <h2>7. Les sous programmes</h2>
+            <details open>
+                <summary>Sommaire</summary>
+                <div class="sommaire_square">
+                    <h3>Sommaire</h3>
+                    <HR>
+                    <a href="#71_def">
+                        <h5 class="ns">7.1 - Utilisation </h5>
+                    </a>
+                    <a href="#72_arg">
+                        <h5 class="ns">7.2 - Les arguments</h5>
+                    </a>
+                    <a href="#73_res">
+                        <h5>7.3 - Résultats de fonction</h5>
+                    </a>
+                </div>
+            </details>
+
+            <h3 id="71_def">7.1 - Utilisation</h3>
+            <hr>
+            <p>
+                En Python, afin de créer un sous programme (ou fonction) vous allez avoir besoin du mot-clé
+                <code>def</code> et du mot-clé <code>return</code> dans le cas où vous souhaitez retourner quelque chose
+            </p>
+            <p>Exemple de fonction avec retour</p>
+
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> def PlusUn(entier):
+        return entier+1
+
+    >>> PlusUn(8)
+    9
+                    </code>
+                </pre>
+            </div>
+
+            <h3 id="72_arg">7.2 - Les arguments</h3>
+            <hr>
+
+            <p>Lorsque l'on crée une fonction, il est possible d'avoir aucun ou plusieurs arguments. Lorsque le nombre
+                d'arguments à l'appel de la fonction n'est pas respecté, une erreur apparait.
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> def GrosseAddition(e1,e2,e3,e4,e5):
+	    return e1+e2+e3+e4+e5
+
+    >>> GrosseAddition(1,2,4,8,1)
+    16
+    >>> GrosseAddition(7)
+    Traceback (most recent call last):
+    ...
+    TypeError: GrosseAddition() missing 4 required positional arguments: 'e2', 'e3', 'e4', and 'e5'
+                    </code>
+                </pre>
+            </div>
+
+
+            <h3 id="73_res">7.3 - Les résultats de fonction</h3>
+            <hr>
+            <p>Les fonctions peuvent renvoyer plusieurs résultats à la fois.
+            </p>
+
+            <p>En voici un exemple simple :</p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    def PlusUnEtDeux(entier):
+        return entier+1,entier+2
+                    </code>
+                </pre>
+            </div>
+            <p>En réalité Python crée un tableau en tant que résultat, il est par conséquent possible de l'exploiter
+                également. Comme pour récupérer uniquement la deuxième valeur par exemple </p>
+                <div class="code">
+                    <pre>
+                        <code class="language-python"> 
+    def PlusUnEtDeux(entier):
+        return entier+1,entier+2
+            
+    valeur = PlusUnEtDeux(7)
+    print(valeur[1])
+                        </code>
+                    </pre>
+                </div>
+
+            
+            <input onclick="window.location.href='tableaux.html'" class="button_style" type="button"
+                value="<< 6. Les tableaux">
+            <input onclick="window.location.href='../exercices.html'" class="button_style" type="button"
+                value="Passer aux exercices... >>">
+    </main>
+
+</body>
+
+</html>

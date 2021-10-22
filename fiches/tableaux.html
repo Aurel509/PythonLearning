@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/apprendre.css">
+    <link rel="stylesheet" href="../styles/prism.css">
+    <link rel="icon" href="../img/icon.ico">
+    
+    <title>6. Les tableaux</title>
+
+</head>
+
+<body>
+
+    <script src="../scripts/prism.js"></script>
+
+
+
+    <header>
+        <img width="30" height="30" alt="logo" src="../img/logosite.png" />
+        <a href="../index.html" class="logo">LearnPY</a>
+        <a href="../apprendre.html">APPRENDRE</a>
+        <a href="../exercices.html">EXERCICES</a>
+        <a href="../apropos.html">A PROPOS</a>
+    </header>
+
+    <main>
+        <div class="exos">
+            <h2>6. Les tableaux</h2>
+            <details open>
+                <summary>Sommaire</summary>
+                <div class="sommaire_square">
+                    <h3>Sommaire</h3>
+                    <HR>
+                    <a href="#61_def">
+                        <h5 class="ns">6.1 - Définition et utilisation </h5>
+                    </a>
+                    <a href="#62_fonctions">
+                        <h5 class="ns">6.2 - Les fonctions avec les tableaux</h5>
+                    </a>
+                    <a href="#63_tranches">
+                        <h5>6.3 - Les tranches</h5>
+                    </a>
+                </div>
+            </details>
+
+            <h3 id="61_def">6.1 - Définition et utilisation</h3>
+            <hr>
+            <p>
+                Un tableau est une structure de données qui contient des valeurs.</p>
+
+            <p>
+                En Python, un tableau peut contenir des types différents donnant une grande flexibilité à ces derniers.
+                Ils sont déclarés par une série de valeurs séparées par des virgules et encadrées par des crochets
+            </p>
+            <p>Les tableaux sont séparés en <strong>indices</strong> (ou index). </p>
+
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    tableau  : ['poubelle', 'carton', 'papier', 'les oignons']
+    indice :            0         1         2              3
+                    </code>
+                </pre>
+            </div>
+            <p>Notez bien que les tableaux commençent à <strong>0</strong> et non <strong>1</strong>. Voici un exemple
+                d'utilisation : </p>
+
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> tableau = ['je','suis','un','tableau']
+    >>> tableau[2]
+    'un'
+                    </code>
+                </pre>
+            </div>
+            <h3 id="62_fonctions">6.2 - Les fonctions avec les tableaux</h3>
+            <hr>
+
+            <p>Il existe différentes fonction qu'il est possible d'utiliser avec les tableaux.</p>
+            <p>La fonction <code>len()</code> permet de déterminer la longueur d'un tableau.</p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> tableau = ['carton','oignon']
+    >>> len(tableau)
+    2
+                    </code>
+                </pre>
+            </div>
+            <p>Les fonctions de calculs <code>min() max() sum()</code> donnant respectivement le minimum, le maximum et
+                la somme d'un tableau</p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> tableau = [11,5,9,8,4,0,1]
+    >>> min(tableau)
+    0
+    >>> max(tableau)
+    11
+    >>> sum(tableau)
+    38
+                    </code>
+                </pre>
+            </div>
+            <p>La fonction <code>append()</code> permettant d'ajouter une valeur dans un tableau</p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> tableau = ['truc']
+    >>> tableau.append('test')
+    >>> tableau.append(123)
+    >>> tableau
+    ['truc', 'test', 123]
+                    </code>
+                </pre>
+            </div>
+            <h3 id="63_tranches">6.3 - Les tranches</h3>
+            <hr>
+            <p>Il est également possible de sélectionner une partie d'un tableau sur le modèle
+                <code>[m:n]</code> allant de <code>m</code> à <code>n</code></p>
+
+            <p>On parle donc de <strong>tranches</strong>, voici un exemple :</p>
+            <div class="code">
+                <pre>
+                    <code class="language-python"> 
+    >>> tableau = ['je','suis','un','autre','tableau','sans','utilité']
+    >>> tableau[0:3]
+    ['je', 'suis', 'un']
+    >>> tableau[2:5]
+    ['un', 'autre', 'tableau']
+                    </code>
+                </pre>
+            </div>
+            <p>Faites attention à ne pas dépasser les limites du tableau</p>            
+            <input onclick="window.location.href='structureI.html'" class="button_style" type="button"
+                value="<< 5. Les structures itératives">
+            <input onclick="window.location.href='sousprogrammes.html'" class="button_style" type="button"
+                value="7. Les sous programmes >>">
+    </main>
+
+</body>
+
+</html>
